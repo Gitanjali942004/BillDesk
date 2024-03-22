@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,13 @@ public class RecyclerBillAdapter extends RecyclerView.Adapter<RecyclerBillAdapte
 {
     Context context;
     ArrayList<BillModel> arrContacts;
+    private OnItemClickListener listener;
+    public interface  OnItemClickListener{
+        void onItemClick(int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener clickListener){
+        listener=clickListener;
+    }
     RecyclerBillAdapter(Context context, ArrayList<BillModel> arrContacts)
     {
         this.context=context;
@@ -24,7 +32,9 @@ public class RecyclerBillAdapter extends RecyclerView.Adapter<RecyclerBillAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view=LayoutInflater.from(context).inflate(R.layout.meddata,parent,false);
-        ViewHolder viewHolder=new ViewHolder(view);
+        ViewHolder viewHolder=new ViewHolder(view,listener);
+
+
         return viewHolder;
     }
 
@@ -44,11 +54,21 @@ public class RecyclerBillAdapter extends RecyclerView.Adapter<RecyclerBillAdapte
 
     public class  ViewHolder extends  RecyclerView.ViewHolder{
         TextView txtName,txtNumber,txtTime;
-        public ViewHolder(View itemView) {
+        ImageView imageView;
+        public ViewHolder(View itemView,OnItemClickListener listener) {
             super(itemView);
             txtName=itemView.findViewById(R.id.txtName);
             txtNumber=itemView.findViewById((R.id.txtNumber));
             txtTime=itemView.findViewById(R.id.txtTime);
+
+            imageView=itemView.findViewById(R.id.deldata);
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                  listener.onItemClick(getAdapterPosition());
+                }
+            });
 
         }
     }

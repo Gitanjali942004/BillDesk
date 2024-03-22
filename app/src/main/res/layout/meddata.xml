@@ -39,6 +39,14 @@
             android:layout_weight="1"
             android:text="Textview"
             android:textColor="#08830D" />
+
+        <ImageView
+            android:id="@+id/deldata"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/img_4" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

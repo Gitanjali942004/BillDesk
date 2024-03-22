@@ -16,165 +16,157 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ScrollView
+            <!-- Product Details Section -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:background="#f9f9f9">
 
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Product Details"
+                    android:textColor="#070404"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp">
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginRight="20dp"
-                        android:text="Product Details"
-                        android:textColor="#070404"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="25dp"
+                    <EditText
+                        android:id="@+id/ProName"
+                        android:layout_width="174dp"
+                        android:layout_height="45dp"
                         android:layout_marginRight="10dp"
-                        android:orientation="horizontal">
+                        android:background="#edeeef"
+                        android:ems="10"
+                        android:hint="Product Name"
+                        android:inputType="text" />
 
-                        <EditText
-                            android:id="@+id/ProName"
-                            android:layout_width="174dp"
-                            android:layout_height="45dp"
-                            android:layout_marginRight="10dp"
-                            android:background="#edeeef"
-                            android:ems="10"
-                            android:hint="Product Name"
-                            android:inputType="text" />
-
-                        <EditText
-                            android:id="@+id/ProCat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:background="#edeeef"
-                            android:ems="10"
-                            android:hint="Product Category"
-                            android:inputType="text" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <EditText
+                        android:id="@+id/ProCat"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginRight="10dp"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/ProPrice"
-                            android:layout_width="174dp"
-                            android:layout_height="42dp"
-                            android:layout_marginRight="10dp"
-                            android:background="#edeeef"
-                            android:ems="10"
-                            android:hint="Price"
-                            android:inputType="number" />
-
-                        <EditText
-                            android:id="@+id/ProQnty"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:background="#edeeef"
-                            android:ems="10"
-                            android:hint="Quantity"
-                            android:inputType="number" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginRight="20dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/AddCartBtn"
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="10dp"
-                            android:ems="10"
-                            android:text="Add Cart"
-                            app:icon="@android:drawable/ic_menu_add" />
-
-                        <Button
-                            android:id="@+id/Reset"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:ems="10"
-                            android:text="Reset all" />
-                    </LinearLayout>
-
+                        android:background="#edeeef"
+                        android:ems="10"
+                        android:hint="Product Category"
+                        android:inputType="text" />
                 </LinearLayout>
-            </ScrollView>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp">
 
-            <ScrollView
+                    <EditText
+                        android:id="@+id/ProPrice"
+                        android:layout_width="174dp"
+                        android:layout_height="42dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#edeeef"
+                        android:ems="10"
+                        android:hint="Price"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/ProQnty"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:background="#edeeef"
+                        android:ems="10"
+                        android:hint="Quantity"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="20dp">
+
+                    <Button
+                        android:id="@+id/AddCartBtn"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:ems="10"
+                        android:text="Add Cart"
+                        app:icon="@android:drawable/ic_menu_add" />
+
+                    <Button
+                        android:id="@+id/Reset"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:ems="10"
+                        android:text="Reset all" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Cart Section -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="20dp"
                 android:background="#edeeef">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="visible">
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:visibility="visible">
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cart" />
 
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Cart" />
+                    <Button
+                        android:id="@+id/remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="140dp"
+                        android:layout_weight="1"
+                        android:text="Remove All" />
 
-                        <Button
-                            android:id="@+id/remove"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="140dp"
-                            android:layout_weight="1"
-                            android:text="Remove All" />
-
-                    </LinearLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv"
-                        android:layout_width="333dp"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="5dp" />
                 </LinearLayout>
-            </ScrollView>
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <!-- Total Payable Amount and PDF Button -->
             <TextView
                 android:id="@+id/totalTextView"
                 android:layout_width="wrap_content"
@@ -183,7 +175,13 @@
                 android:text="Total payable amount:"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-        </LinearLayout>
 
+            <Button
+                android:id="@+id/generatePdfButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PDF" />
+
+        </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

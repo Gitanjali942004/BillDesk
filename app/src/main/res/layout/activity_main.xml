@@ -21,11 +21,11 @@
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/img" />
+                app:srcCompat="@drawable/logowithtext" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="60dp"
@@ -36,7 +36,7 @@
                 android:minLines="2"
                 android:text="Calculate your bills easily with us"
                 android:textColor="#000000"
-                android:textSize="40sp"
+                android:textSize="38sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -58,6 +58,7 @@
                 android:layout_marginRight="20dp"
                 android:ems="10"
                 android:hint="Merchant name"
+
                 android:inputType="text"
                 android:textColorHint="#656161"
                 android:textSize="20sp" />
